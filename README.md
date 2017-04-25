@@ -10,7 +10,7 @@
 [![Build Status](https://travis-ci.org/scls19fr/windrose.svg)](https://travis-ci.org/scls19fr/windrose)
 [![Research software impact](http://depsy.org/api/package/pypi/windrose/badge.svg)](http://depsy.org/package/python/windrose)
 
-#windrose
+# Windrose
 
 A windrose, also known as a polar rose plot, is a special diagram for representing the distribution of meteorological datas, typically wind speeds by class and direction.
 This is a simple module for the matplotlib python library, which requires numpy for internal computation.
@@ -19,7 +19,7 @@ Original code forked from:
  - windrose 1.4 by [Lionel Roubeyrie](https://github.com/LionelR) <lionel.roubeyrie@gmail.com> http://youarealegend.blogspot.fr/search/label/windrose
 
 
-##Requirements:
+## Requirements:
 
  - matplotlib http://matplotlib.org/
  - numpy http://www.numpy.org/
@@ -40,13 +40,13 @@ A package is available and can be downloaded from PyPi and installed using:
 $ pip install windrose
 ```
 
-##Notebook example :
+## Notebook example :
 
 An [IPython (Jupyter)](http://ipython.org/) notebook showing this package usage is available at:
 
  - http://nbviewer.ipython.org/github/scls19fr/windrose/blob/master/windrose_sample_random.ipynb
 
-##Script example :
+## Script example :
 
 This example use randoms values for wind speed and direction(ws and wd variables). In situation, these variables are loaded with reals values (1-D array), from a database or directly from a text file (see the "load" facility from the matplotlib.pylab interface for that).
 
@@ -62,7 +62,7 @@ ws = np.random.random(500) * 6
 wd = np.random.random(500) * 360
 ```
 
-###A stacked histogram with normed (displayed in percent) results :
+### A stacked histogram with normed (displayed in percent) results :
 
 ```python
 ax = WindroseAxes.from_ax()
@@ -72,7 +72,7 @@ ax.set_legend()
 
 ![bar](screenshots/bar.png)
 
-###Another stacked histogram representation, not normed, with bins limits
+### Another stacked histogram representation, not normed, with bins limits
 
 ```python
 ax = WindroseAxes.from_ax()
@@ -82,7 +82,7 @@ ax.set_legend()
 
 ![box](screenshots/box.png)
 
-###A windrose in filled representation, with a controled colormap
+### A windrose in filled representation, with a controled colormap
 
 ```python
 ax = WindroseAxes.from_ax()
@@ -92,7 +92,7 @@ ax.set_legend()
 
 ![contourf](screenshots/contourf.png)
 
-###Same as above, but with contours over each filled region...
+### Same as above, but with contours over each filled region...
 
 ```python
 ax = WindroseAxes.from_ax()
@@ -103,7 +103,7 @@ ax.set_legend()
 
 ![contourf-contour](screenshots/contourf-contour.png)
 
-###...or without filled regions
+### ...or without filled regions
 
 ```python
 ax = WindroseAxes.from_ax()
@@ -164,7 +164,7 @@ Optional:
  - `mean_values` : Bool - specify wind speed statistics with direction=specific mean wind speeds. If this flag is specified, var is expected to be an array of mean wind speeds corresponding to each entry in `direction`. These are used to generate a distribution of wind speeds assuming the distribution is Weibull with shape factor = 2.
  - `weibull_factors` : Bool - specify wind speed statistics with direction=specific weibull scale and shape factors. If this flag is specified, var is expected to be of the form [[7,2], ...., [7.5,1.9]] where var[i][0] is the weibull scale factor and var[i][1] is the shape factor
 
-###probability density function (pdf) and fitting Weibull distribution
+### probability density function (pdf) and fitting Weibull distribution
 
 A probability density function can be plot using:
 
@@ -186,12 +186,12 @@ print(params)
 ```
 
 
-##Functional API
+## Functional API
 
 Instead of using object oriented approach like previously shown, some "shortcut" functions have been defined: `wrbox`, `wrbar`, `wrcontour`, `wrcontourf`, `wrpdf`.
 See [unit tests](tests/test_windrose.py).
 
-##Pandas support
+## Pandas support
 
 windrose not only supports Numpy arrays. It also supports also Pandas DataFrame. `plot_windrose` function provides most of plotting features previously shown.
 
@@ -214,12 +214,12 @@ Optional:
  - `direction_name` : name of direction column name ; default value is `DIR_DEFAULT='direction'`
  - `clean_flag` : cleanup data flag (remove data points with `NaN`, `var=0`) before plotting ; default value is `True`.
 
-##Subplots
+## Subplots
 
 ![subplots](screenshots/subplots.png)
 
 
-##Video export
+## Video export
 A video of plots can be exported.
 A playlist of videos is available at https://www.youtube.com/playlist?list=PLE9hIvV5BUzsQ4EPBDnJucgmmZ85D_b-W
 
