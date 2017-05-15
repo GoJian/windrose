@@ -34,10 +34,24 @@ Option libraries:
 
 ## Install
 
+### Install latest release version via pip
+
 A package is available and can be downloaded from PyPi and installed using:
 
 ```bash
 $ pip install windrose
+```
+### Install latest development version
+
+```bash
+$ pip install git+https://github.com/scls19fr/windrose
+```
+
+or
+
+```bash
+$ git clone https://github.com/scls19fr/windrose
+$ python setup.py install
 ```
 
 ## Notebook example :
